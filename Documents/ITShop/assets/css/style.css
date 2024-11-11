@@ -1,0 +1,153 @@
+/* รูปแบบทั่วไป */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* แสดงสินค้า 2 ชิ้นต่อแถว */
+    gap: 1rem;
+    padding: 1rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.product img {
+    width: 100%; /* ขยายเต็มความกว้างของคอนเทนเนอร์ */
+    height: 400px; /* ความสูงที่เท่ากันสำหรับทุกภาพ */
+    object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่ผิดสัดส่วน */
+    border-radius: 5px;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* ตะกร้าแสดงที่มุมขวาบน */
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* การแสดงตะกร้า */
+.cart-modal {
+    display: none; /* ซ่อนตะกร้า */
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cart-modal.show {
+    display: block; /* แสดงตะกร้า */
+}
+
+.cart-content {
+    text-align: left;
+}
+
+.cart-content h2 {
+    margin-top: 0;
+}
+
+.cart-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>I-IUANShop IT</h1>
+        <div class="cart" onclick="toggleCart()">
+            <span>🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="Product.html">สินค้า</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>สินค้า</h2>
+        <div class="container">
+        <div class="product-grid">
+            <div class="product" data-name="Wooting 60HE+ | the 60% rapid trigger keyboard" data-price="3390">
+                <img src="images/m.jpg" alt="Keyboard">
+                <h3>Logitech G Pro X Superlight Wireless Gaming Mouse</h3>
+                <p>ราคา: 3,390 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+            <div class="product" data-name="Wooting 60HE+ | the 60% rapid trigger keyboard" data-price="10935">
+                <img src="images/k.jpg" alt="Keyboard">
+                <h3>Wooting 60HE+ | the 60% rapid trigger keyboard</h3>
+                <p>ราคา: 10,935 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="HyperX SoloCast Gaming Microphon" data-price="1690">
+                <img src="images/mx.jpg" alt="Keyboard">
+                <h3>HyperX SoloCast Gaming Microphone</h3>
+                <p>ราคา: 1,690 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="HEADSET HYPERX CLOUD III (RED)" data-price="3090">
+                <img src="images/hy.png" alt="Keyboard">
+                <h3>HEADSET HYPERX CLOUD III (RED)</h3>
+                <p>ราคา: 3,090 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="ZOWIE XL2411K 144Hz DyAc 24" data-price="7400">
+                <img src="images/zo.jfif" alt="Keyboard">
+                <h3>ZOWIE XL2411K 144Hz DyAc 24"</h3>
+                <p>ราคา: 7,400 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="M Chair Ultimate Gaming Chair (RED)" data-price="2290">
+                <img src="images/c.png" alt="Keyboard">
+                <h3>M Chair Ultimate Gaming Chair (RED)</h3>
+                <p>ราคา: 2,290 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="VGA INNO3D GEFORCE RTX 3050 TWIN X2 - 6GB GDDR6" data-price="6290">
+                <img src="images/G.jpg" alt="Keyboard">
+                <h3>VGA INNO3D GEFORCE RTX 3050 TWIN X2 - 6GB GDDR6</h3>
+                <p>ราคา: 6,290 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product" data-name="Logitech C922 Pro Stream Webcam" data-price="3590">
+                <img src="images/ka.jpg" alt="Keyboard">
+                <h3>Logitech C922 Pro Stream Webcam</h3>
+                <p>ราคา: 3,590 บาท</p>
+                <button onclick="addToCart(this)">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+    </section>
+
+<!-- ตะกร้าสินค้า (เริ่มซ่อน) -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>ตะกร้าของคุณ</h2>
+        <ul id="cart-items"></ul>
+        <p>รวมทั้งหมด: ฿<span id="total-price">0</span></p>
+    </div>
+</div>
+<section id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>อีเมล: IUANShop@gmail.com</p>
+    <p>เบอร์โทร: 02-123-4567</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 ร้านขายอุปกรณ์ IT</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
