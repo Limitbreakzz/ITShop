@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Shoe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <header class="bg-blue-600 text-white">
+    <div class="container mx-auto px-6 flex items-center justify-between py-4">
+      <!-- Logo -->
+      <div class="flex items-center space-x-4">
+        <img src="im/5.png" alt="Logo" class="w-10 h-10">
+        <div class="text-xl font-bold">IT Shop Shoe</div>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button id="menu-toggle" class="block lg:hidden focus:outline-none">
+        <!-- Toggler Icon -->
+        <span class="navbar-toggler-icon block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="navbar-toggler-icon block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="navbar-toggler-icon block w-6 h-0.5 bg-white"></span>
+      </button>
+
+      <!-- Navigation Menu (Desktop) -->
+      <nav class="hidden lg:flex space-x-6">
+        <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+        <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">About</a>
+        <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+        <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Navigation Menu (Mobile) -->
+    <nav id="mobile-menu" class="hidden flex flex-col space-y-2 bg-blue-600 lg:hidden px-6 py-4">
+      <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+      <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">About</a>
+      <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+      <a href="#" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+    </nav>
+
+    <!-- ปุ่ม Hamberger Menu -->
+   <button class="md:hidden text-white" id="hamberger">
+    &#9776;
+   </button>
+
+  </header>
+
+  <div id="hamberger=menu" class="md-hidden bg-blue-600 text-white py-4 hidden">
+    <nav class="flex flex-col space-y-4 px-6">
+      <a href="" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+      <a href="" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">About</a>
+      <a href="" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+      <a href="" class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+    </nav>
+  </div>
+
+  <script>
+    const hambergerButton = document.getElementById('hamberger');
+    const hambergerMenu = document.getElementById('hamberger-menu');
+
+    hambergerButton.addEventListener('click', () => {
+      hambergerMenu.classList.toggle('hidden');
+    })
+
+   </script>
+
+  <!-- Carousel -->
+  <section class="container mx-auto px-6 my-8">
+    <h2 class="text-2xl font-bold mb-4">Recommend</h2>
+    <div class="relative">
+      <div class="carousel flex overflow-x-scroll space-x-4">
+        <img src="im/b1.jpg" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <img src="im/n1.jpg" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <img src="im/p1.jpg" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <img src="im/v1.jpg" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <img src="im/x1.jpg" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <img src="im/z1.png" alt="" class="w-full h-48 object-cover rounded-lg shadow-md">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Product -->
+  <section class="container mx-auto px-6 my-8">
+    <h2 class="text-2xl font-bold mb-4">Product</h2>
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Product 1 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="im/chang.png" alt="Product 1" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Changdao</h3>
+          <p class="text-gray-600 text-sm mb-4">รองเท้าแตะช้างดาวรุ่นคลาสสิค มีความทนทานของยางพาราธรรมชาติจากประเทศไทย
+          </p><br><br>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-bold text-blue-600">฿39.00</span>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+              Now</button>
+          </div>
+        </div>
+      </div>
+      <!--products 2 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="im/air-jordan.jpg" alt="Product 1" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Jordan 1 Retro Low OG SP Travis Scott Mocha</h3>
+          <p class="text-gray-600 text-sm mb-4">Travis Scott ศิลปินฮิปฮอป ผู้ก่อตั้งค่ายเพลง และมีพื้นเพจากฮิวสตัน
+            สานต่อการประทับรอยของเขาไว้บน Jordan 1 Retro Low </p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-bold text-blue-600">฿19,999.00</span>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+              Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="im/NIke-jordan.jpg" alt="Product 1" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Nike Jordan 1 Retro High Spider Man Origin Story (Special Box)</h3><br>
+          <p class="text-gray-600 text-sm mb-4">Jordan X Spider-Man Air Jordan 1 Retro High OG "Origin Story" Sneakers
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-bold text-blue-600">฿29,900.00</span>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+              Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="im/superstar.png" alt="Product 1" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">adidas Superstar Cloud White Core Black</h3><br>
+          <p class="text-gray-600 text-sm mb-4">สร้างสรรค์มาเพื่อบาสเกตบอล สู่ไอเทมยอดฮิตในแวดวงฮิปฮอปและสเกต Superstar
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-bold text-blue-600">฿1,499.00</span>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+              Now</button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-blue-600 text-white">
+    <div class="container mx-auto px-6 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- About Us -->
+        <div>
+          <img src="im/5.png" alt="Logo" class="w-24 h-30"><br>
+          <p class="text-sm text-gray-200">
+            IT Shop Shoe สามารถซื้อสินค้าได้ตลอดเวลา 24 ชั่วโมง ทุกที่ ทุกเวลา ทั้งโทรศัพท์ และ PC
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Home</a></li>
+            <li><a href="#" class="hover:text-blue-300">About</a></li>
+            <li><a href="#" class="hover:text-blue-300">Products</a></li>
+            <li><a href="#" class="hover:text-blue-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li><span class="font-semibold">Phone:</span> +123 456 7890</li>
+            <li><span class="font-semibold">Email:</span> ITShopShoe@company.com</li>
+            <li><span class="font-semibold">Address:</span> 123 Street, City, Country</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="mt-8 border-t border-gray-400 pt-6 text-center">
+        <p class="text-sm text-gray-300">
+          &copy; 2024 ITShopShoe. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- JavaScript สำหรับ Hamburger Menu -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+
+</html>
